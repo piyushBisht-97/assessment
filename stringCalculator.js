@@ -1,4 +1,4 @@
-export function stringCalculator(numbers){
+ function stringCalculator(numbers){
     const separtors = /,|\n/
 
     const data = numbers.split(separtors).map((item)=>Number(item))
@@ -9,4 +9,6 @@ export function stringCalculator(numbers){
     const result = data.reduce((acc,curr) =>acc+curr,0)
 return result    
 }
-console.log("=-=--=-",stringCal("1,9"))
+
+
+module.exports = stringCalculator;
