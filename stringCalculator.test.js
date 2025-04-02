@@ -7,3 +7,11 @@ test("Will retun 0 if input is an empty string ",()=>{
 test("Will return negative numbers not allowed if input is negative number",()=>{
     expect(stringCalculator("1,-5")).toBe("negative numbers not allowed")
 })
+
+test("Should return sum of input string",()=>{
+    expect(stringCalculator("1,7")).toBe(8)
+})
+
+test("Supports multiple delimiter",()=>{
+    expect(stringCalculator("//;\n1;2").toBe(3))
+})
